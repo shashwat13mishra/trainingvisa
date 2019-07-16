@@ -21,12 +21,12 @@ public class Login extends HttpServlet {
 		String n = request.getParameter("userName");
 		String p = request.getParameter("userPass");
 		if (p.contentEquals("Thanos")) {
-			RequestDispatcher rd = request.getRequestDispatcher("servlet2");
+			RequestDispatcher rd = request.getRequestDispatcher("/addBooks.html");
 			rd.forward(request, response);
 		} else {
 			out.println("Wrong password");
 			RequestDispatcher rd = request.getRequestDispatcher("/login.html");
-		rd.include(request, response);
+			rd.include(request, response);
 		}
 
 	}
